@@ -1,0 +1,249 @@
+<html lang="en">
+<head>
+<title>FeedBack Page</title>
+<link rel="stylesheet" href="">
+<link rel="icon" href="logo.png" type="image/x-icon">
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), 
+                url('wel.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.main {
+    width: 100%;
+    height: auto; 
+    min-height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), 
+                url('wel.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+
+.navbar{
+    width: 900px;
+    height: 75px;
+    margin: auto;
+}
+
+.logo{
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #ff7200;
+}
+.email{
+width: 400px;
+height: 460px;
+position:absolute;
+    left: 40%;
+    top:27%;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 15px;
+    background: transparent;
+    border-radius:10px;
+ transform: translate(0%,-5%);
+    padding: 8px;
+    }
+.email h1{
+ width: 220px;
+    left: 19%;
+    position:relative;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin:2px;
+    padding: 8px;
+    margin-top: 6%;
+}
+.email input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}
+.email input:focus{
+    outline: none;
+}
+
+textarea {
+  width: 75%;
+  height: 130px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ff7200;
+  margin-top:10px;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 16px;
+  resize: none;
+  color: #fff;
+}
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+.bt{
+    width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.bt:hover{
+    background: #fff;
+    color: #ff7200;
+}
+.bt a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    .menu ul {
+        flex-wrap: wrap;
+    }
+    .menu ul li {
+        margin: 10px 10px;
+    }
+    .email {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .menu ul {
+        flex-direction: row;
+    }
+    .menu ul li {
+        margin-left: 10px ;
+         margin-top: 20px ;
+    }
+    .email {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+    .email h1 {
+        font-size: 20px;
+    }
+    .email input, textarea {
+        width: calc(100% - 30px);
+    }
+    .email button {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+</style>
+ <script>
+        function setSubject() {
+            const username = document.querySelector('input[name="Username"]').value;
+            document.querySelector('input[name="subject"]').value = `${username} sent a message`;
+        }
+    </script>
+</head>
+  <body>
+<div class="main">
+ <div class="navbar">
+<div class="icon">
+<h2 class="logo">MOCK TEST</h2>
+</div>
+<div class="menu">
+    <ul>  
+         <li><a href="choice.php">HOME</a><li>
+            <li><a href="about.html">ABOUT</a><li></li>
+            <li><a href="services.html">SERVICE</a><li></li>
+            <li><a href="contact.html">FEEDBACK</a><li></li>
+            </UL>
+        </div>
+<br><br>
+            </div>
+<br>
+<br>
+<br>
+ <div class="email"><h1>Contact-Us</h1></br>
+    <form action="https://api.web3forms.com/submit" method="POST" onsubmit="setSubject() ">
+<input type="hidden" name="access_key" value="9911e600-7490-4e88-ac37-3aec322ee6d1">
+      <input type="text" name="Username" placeholder="your Name" required><br><br>
+      <input type="email" name="Email" placeholder="your email" required><br><br>
+         <textarea id="ta"name="Message" placeholder="Your Message...." required></textarea>
+<input type="hidden" name="subject"/>
+</br></br>
+      <button class="bt" >Submit</button>
+    </form></div>
+  </body>
+</html>
